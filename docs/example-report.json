@@ -1,0 +1,98 @@
+{
+  "simulation": true,
+  "checks": {
+    "home": {
+      "label": "А · демонстрация",
+      "time": "2026-01-01T12:00:00",
+      "gateway_ping": {
+        "sent": 5,
+        "replies": 5,
+        "loss_pct": 0,
+        "latency_ms": 2,
+        "jitter_ms": 1
+      },
+      "internet_ping": {
+        "sent": 5,
+        "replies": 5,
+        "loss_pct": 0,
+        "latency_ms": 38,
+        "jitter_ms": 5
+      },
+      "speed": null,
+      "windows_build": "26100",
+      "dns_ok": true,
+      "mtu_trials": {
+        "1228": 2,
+        "1400": 2,
+        "1500": 0
+      },
+      "router": {
+        "vendor": "Huawei",
+        "model_hint": "HG8245H",
+        "http_status": 200
+      },
+      "vpn": {
+        "status": "udp_requires_handshake",
+        "transport": "UDP"
+      },
+      "vpn_log": {
+        "protocols": [
+          "AmneziaWG"
+        ],
+        "last_event": "handshake"
+      },
+      "tunnel_count": 0,
+      "unavailable": []
+    },
+    "mobile": {
+      "label": "Б · демонстрация",
+      "time": "2026-01-01T12:00:00",
+      "gateway_ping": {
+        "sent": 5,
+        "replies": 5,
+        "loss_pct": 0,
+        "latency_ms": 2,
+        "jitter_ms": 1
+      },
+      "internet_ping": {
+        "sent": 5,
+        "replies": 5,
+        "loss_pct": 0,
+        "latency_ms": 38,
+        "jitter_ms": 5
+      },
+      "speed": null,
+      "windows_build": "26100",
+      "dns_ok": true,
+      "mtu_trials": {
+        "1228": 2,
+        "1400": 2,
+        "1500": 2
+      },
+      "router": {
+        "vendor": null,
+        "model_hint": null,
+        "http_status": null
+      },
+      "vpn": {
+        "status": "udp_requires_handshake",
+        "transport": "UDP"
+      },
+      "vpn_log": {
+        "protocols": [
+          "AmneziaWG"
+        ],
+        "last_event": "connected"
+      },
+      "tunnel_count": 0,
+      "unavailable": []
+    }
+  },
+  "comparison": [
+    "Дом: Для UDP нужен результат рукопожатия из журнала VPN. Мобильная сеть: Для UDP нужен результат рукопожатия из журнала VPN.",
+    "В журнале А видна ошибка рукопожатия, в Б — успешное подключение. Сверьте время попыток и профиль VPN.",
+    "Шлюз: потери в А 0%, в Б 0%.",
+    "Внешний узел: потери в А 0%, в Б 0%.",
+    "IPv4 до контрольного узла: наибольший прошедший размер в А — 1400, в Б — 1500 байт. Сравните путь к самому VPN-серверу."
+  ]
+}
